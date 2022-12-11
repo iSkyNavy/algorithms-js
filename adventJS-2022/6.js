@@ -1,0 +1,35 @@
+function createCube(size) {
+  let head = [];
+  let tail = [];
+  for (let i = 1; i <= size; i++) {
+    head.push(" ".repeat(size - i) + "/\\".repeat(i) + "_\\".repeat(size));
+    tail.push(
+      " ".repeat(i - 1) + "\\/".repeat(size - (i - 1)) + "_/".repeat(size)
+    );
+  }
+  return [...head, ...tail].join("\n");
+}
+
+console.log(createCube(3));
+/* 
+
+size = 1
+/\_\
+\/_/
+
+size = 2
+
+ /\_\_\
+/\/\_\_\
+\/\/_/_/
+ \/_/_/
+
+size = 3
+  /\_\_\_\
+ /\/\_\_\_\
+/\/\/\_\_\_\
+\/\/\/_/_/_/
+ \/\/_/_/_/
+  \/_/_/_/
+    
+*/
