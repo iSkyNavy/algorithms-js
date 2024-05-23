@@ -1,3 +1,4 @@
+let ff = [];
 const bunny = {
   name: "Chester",
   tasks: ["Speak", "Learn", "Teach"],
@@ -6,6 +7,11 @@ const bunny = {
       console.log(this.name + " wants to : " + element);
     });
   },
+  showTask2: function () {
+    this.tasks.forEach(function (element) {
+      console.log(bunny.name + " wants to : " + element);
+    })
+  }
 };
 
-bunny.showTask();
+bunny.showTask2();
